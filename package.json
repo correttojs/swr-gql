@@ -1,0 +1,28 @@
+{
+  "name": "swr-gql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@graphql-typed-document-node/core": "^3.1.1",
+    "graphql": "^16.2.0",
+    "graphql-request": "^3.7.0",
+    "swr": "^1.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/correttojs/swr-gql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/correttojs/swr-gql/issues"
+  },
+  "homepage": "https://github.com/correttojs/swr-gql#readme"
+}
