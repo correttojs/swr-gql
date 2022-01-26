@@ -1,0 +1,9 @@
+overwrite: true
+schema: "https://countries.trevorblades.com/"
+documents: "src/**/*.graphql"
+generates:
+    src/codegen.ts:
+      plugins:
+          - 'typescript'
+          - 'typescript-operations'
+          - 'typed-document-node'
