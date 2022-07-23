@@ -10,7 +10,7 @@ const Home: NextPage<ContinentsQuery> = (props) => {
   const { data } = useSwrGql(
     ContinentsDocument,
     {},
-    { url: "/api/graphql", fallbackData: props }
+    { url: `${process.env.VERCEL_URL||""}/api/graphql`, fallbackData: props }
   );
 
   return (
