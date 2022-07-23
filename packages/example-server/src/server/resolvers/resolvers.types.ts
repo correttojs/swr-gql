@@ -19,9 +19,30 @@ export type Continent = {
   name: Scalars['String'];
 };
 
+export type ContinentFilter = {
+  continent?: InputMaybe<FilterEq>;
+};
+
+export type Country = {
+  __typename?: 'Country';
+  code: Scalars['String'];
+  name: Scalars['String'];
+  phone: Scalars['String'];
+};
+
+export type FilterEq = {
+  eq: Scalars['String'];
+};
+
 export type Query = {
   __typename?: 'Query';
   continents: Array<Maybe<Continent>>;
+  countries?: Maybe<Array<Maybe<Country>>>;
+};
+
+
+export type QueryCountriesArgs = {
+  filter?: InputMaybe<ContinentFilter>;
 };
 
 export type WithIndex<TObject> = TObject & Record<string, any>;
@@ -96,6 +117,9 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = ResolversObject<{
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Continent: ResolverTypeWrapper<Continent>;
+  ContinentFilter: ContinentFilter;
+  Country: ResolverTypeWrapper<Country>;
+  FilterEq: FilterEq;
   Query: ResolverTypeWrapper<{}>;
   String: ResolverTypeWrapper<Scalars['String']>;
 }>;
@@ -104,6 +128,9 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
   Boolean: Scalars['Boolean'];
   Continent: Continent;
+  ContinentFilter: ContinentFilter;
+  Country: Country;
+  FilterEq: FilterEq;
   Query: {};
   String: Scalars['String'];
 }>;
@@ -114,12 +141,21 @@ export type ContinentResolvers<ContextType = any, ParentType extends ResolversPa
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
+export type CountryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Country'] = ResolversParentTypes['Country']> = ResolversObject<{
+  code?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  phone?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
 export type QueryResolvers<ContextType = any, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   continents?: Resolver<Array<Maybe<ResolversTypes['Continent']>>, ParentType, ContextType>;
+  countries?: Resolver<Maybe<Array<Maybe<ResolversTypes['Country']>>>, ParentType, ContextType, Partial<QueryCountriesArgs>>;
 }>;
 
 export type Resolvers<ContextType = any> = ResolversObject<{
   Continent?: ContinentResolvers<ContextType>;
+  Country?: CountryResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
 }>;
 

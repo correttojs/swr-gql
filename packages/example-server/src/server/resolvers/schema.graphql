@@ -1,8 +1,23 @@
 type Query {
   continents: [Continent]!
+  countries(filter: ContinentFilter): [Country]
 }
 
+input FilterEq {
+  eq: String!
+}
+
+input ContinentFilter {
+  continent:FilterEq
+}
+ 
 type Continent {
   name: String!
+  code: String!
+}
+
+type Country{
+  name: String!
+  phone: String!
   code: String!
 }
