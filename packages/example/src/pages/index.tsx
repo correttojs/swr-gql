@@ -6,7 +6,7 @@ import { useSwrGql } from "@packages/swr-gql/useSwrGql";
 import { ContinentsDocument, ContinentsQuery } from "../client/codegen";
 import { gqlRequest } from "@packages/swr-gql/gqlRequest";
 
-const BASE = process.env.NEXT_PUBLIC_VERCEL_URL? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` :"http://localhost:3001"
+const BASE = "https://swr-gql-server.vercel.app"
 
 const Home: NextPage<ContinentsQuery> = (props) => {
   const { data } = useSwrGql(
