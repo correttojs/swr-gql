@@ -12,7 +12,7 @@
         },
         "codegen": {
           "dependsOn": [],
-          "outputs": []
+          "outputs": ["./packages/example/src/server/resolvers/resolvers.types.ts", "./packages/example/src/client/codegen.ts"]
         }
     }
 }

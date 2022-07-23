@@ -1,3 +1,4 @@
 node_modules
 .vscode
 .turbo
+packages/example/src/client/codegen.ts
