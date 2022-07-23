@@ -2,6 +2,9 @@ import typeDefs from "../../server/resolvers/schema.graphql";
 import { createServer } from "@graphql-yoga/node";
 import { resolvers } from "../../server/resolvers/resolvers";
 
+import Cors from 'cors'
+
+
 const server = createServer({
   cors: false,
   graphiql:
@@ -25,6 +28,12 @@ export const config = {
   api: {
     bodyParser: false,
     externalResolver: true,
+  },
+  cors: {
+    origin: '*',
+    credentials: true,
+    allowedHeaders: ['X-Custom-Header'],
+    methods: ['POST'],
   },
 };
 
