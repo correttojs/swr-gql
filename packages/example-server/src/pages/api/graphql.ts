@@ -24,18 +24,19 @@ const server = createServer({
   },
 });
 
-export const config = {
-  api: {
-    bodyParser: false,
-    externalResolver: true,
-  },
-};
+// export const config = {
+//   api: {
+//     // bodyParser: false,
+//     // externalResolver: true,
+//   },
+// };
 
 
 // Initializing the cors middleware
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],
+  // allowedHeaders: "*"
 })
 
 // Helper method to wait for a middleware to execute before continuing
@@ -60,6 +61,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  console.log("reqqqqqq")
   // Run the middleware
   await runMiddleware(req, res, cors)
 
