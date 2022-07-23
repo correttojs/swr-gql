@@ -21,7 +21,8 @@
   "scripts": {
     "test": "npx turbo run test",
     "dev": "yarn workspace example run dev",
-    "build": "npx turbo run build"
+    "build": "npx turbo run build",
+    "codegen": "npx turbo run codegen"
   },
   "repository": {
     "type": "git",

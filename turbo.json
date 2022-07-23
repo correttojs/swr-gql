@@ -9,6 +9,10 @@
         "test": {
           "dependsOn": ["^build"],
           "outputs": []
+        },
+        "codegen": {
+          "dependsOn": [],
+          "outputs": []
         }
     }
 }

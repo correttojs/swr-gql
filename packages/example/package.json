@@ -7,10 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "codegen-tsc": "yarn codegen && yarn tsc",
+    "codegen": "graphql-codegen --config codegen.resolvers.yml && graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@graphql-typed-document-node/core": "3.1.1",
+    "@graphql-codegen/typescript-resolvers": "2.7.2",
     "@packages/swr-gql": "*",
     "next": "12.2.3",
     "react": "18.2.0",

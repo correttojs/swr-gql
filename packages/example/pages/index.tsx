@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useSwrGql } from "@packages/swr-gql/useSwrGql";
-import { ContinentsDocument, ContinentsQuery } from "../src/codegen";
+import { ContinentsDocument, ContinentsQuery } from "../src/client/codegen";
 import { gqlRequest } from "@packages/swr-gql/gqlRequest";
 
 const Home: NextPage<ContinentsQuery> = (props) => {
@@ -31,9 +31,9 @@ const Home: NextPage<ContinentsQuery> = (props) => {
           <code className={styles.code}>pages/index.tsx</code>
         </p>
 
-        {data &&
+        {data && data.continents &&
           data.continents.map((continent) => (
-            <div key={continent.code}>{continent.name}</div>
+            <div key={continent?.code}>{continent?.name} - {continent?.code}</div>
           ))}
       </main>
 
