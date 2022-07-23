@@ -1,8 +1,7 @@
 import typeDefs from "../../server/resolvers/schema.graphql";
 import { createServer } from "@graphql-yoga/node";
 import { resolvers } from "../../server/resolvers/resolvers";
-
-import Cors from 'cors'
+ 
 
 
 const server = createServer({
