@@ -18,12 +18,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@packages/swr-gql/*": [
-        "../swr-gql/src/*"
-      ]
-    },
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",
