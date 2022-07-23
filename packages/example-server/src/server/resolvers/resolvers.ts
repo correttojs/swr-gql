@@ -26,5 +26,14 @@ export const resolvers: Resolvers = {
       code: "SA"
     } 
   ],
+  countries:()=> [{
+    name: "Italy",
+    phone: "+39",
+    code: "IT"
+  },{
+    name: "Germany",
+    phone: "+49",
+    code: "DE"
+  }]
   },
 };
