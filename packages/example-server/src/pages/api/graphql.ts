@@ -37,6 +37,9 @@ const server = createServer({
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],
   origin: '*',
+  optionsSuccessStatus: 200,
+  allowedHeaders:"*",
+  credentials:true
 })
 
 // Helper method to wait for a middleware to execute before continuing
