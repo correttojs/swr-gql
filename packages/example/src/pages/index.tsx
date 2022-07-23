@@ -7,10 +7,11 @@ import { ContinentsDocument, ContinentsQuery } from "../client/codegen";
 import { gqlRequest } from "@packages/swr-gql/gqlRequest";
 
 const Home: NextPage<ContinentsQuery> = (props) => {
+  console.log(`REACT ${process.env.NEXT_PUBLIC_VERCEL_URL}/api/graphql`)
   const { data } = useSwrGql(
     ContinentsDocument,
     {},
-    { url: `${process.env.VERCEL_URL||""}/api/graphql`, fallbackData: props }
+    { url: `${process.env.NEXT_PUBLIC_VERCEL_URL||""}/api/graphql`, fallbackData: props }
   );
 
   return (
@@ -37,6 +38,7 @@ const Home: NextPage<ContinentsQuery> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => { 
+  console.log(`${process.env.VERCEL_URL}/api/graphql`)
   const data = await gqlRequest(
     ContinentsDocument,
     {},
