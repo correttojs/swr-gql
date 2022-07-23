@@ -32,7 +32,7 @@ export const config = {
     origin: '*',
     credentials: true,
     allowedHeaders: ['X-Custom-Header'],
-    methods: ['POST'],
+    methods: ['POST',"OPTIONS","GET"],
   },
 };
 
