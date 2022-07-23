@@ -36,7 +36,7 @@ const server = createServer({
 // You can read more about the available options here: https://github.com/expressjs/cors#configuration-options
 const cors = Cors({
   methods: ['POST', 'GET', 'HEAD'],
-  // allowedHeaders: "*"
+  origin: '*',
 })
 
 // Helper method to wait for a middleware to execute before continuing
@@ -60,8 +60,7 @@ function runMiddleware(
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {
-  console.log("reqqqqqq")
+) { 
   // Run the middleware
   await runMiddleware(req, res, cors)
 
