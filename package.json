@@ -22,7 +22,7 @@
     "dev": "yarn workspace example run dev",
     "build": "npx turbo run build",
     "codegen": "npx turbo run codegen",
-    "test": "yarn codegen && yarn build"
+    "test": "yarn test"
   },
   "repository": {
     "type": "git",
