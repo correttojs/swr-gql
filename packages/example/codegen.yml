@@ -1,6 +1,6 @@
 overwrite: true
 schema: 
-  - ./src/server/resolvers/schema.graphql
+  - ../example-server/src/server/resolvers/schema.graphql
 documents: "src/client/**/*.graphql"
 generates:
     src/client/codegen.ts:
