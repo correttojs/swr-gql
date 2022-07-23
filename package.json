@@ -19,7 +19,7 @@
     "swr": "1.3.0"
   },
   "scripts": {
-    "dev": "yarn workspace example run dev",
+    "dev": "yarn workspace example run dev & yarn workspace example-server run dev",
     "build": "npx turbo run build",
     "codegen": "npx turbo run codegen",
     "test": "yarn test"
