@@ -65,8 +65,10 @@ export default async function handler(
   res: NextApiResponse
 ) { 
   // Run the middleware
+  console.log(req.method,"method cors")
   await runMiddleware(req, res, cors)
 
+  console.log(req.method,"method gql")
   await server.requestListener(req, res)
 }
  
