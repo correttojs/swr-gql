@@ -3,7 +3,7 @@ import { Resolvers } from "./resolvers.types"
 
 export const resolvers: Resolvers = {
   Query: {
-    Continents: () =>[{
+    continents: () =>[{
       name: "Africa",
       code: "AF"
     },{
