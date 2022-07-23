@@ -1,3 +1,5 @@
 node_modules
 .vscode
 .turbo
+packages/example/src/client/codegen.ts
+packages/example/src/server/resolvers/resolvers.types.ts
