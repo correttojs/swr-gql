@@ -6,12 +6,14 @@ import { useSwrGql } from "@packages/swr-gql/useSwrGql";
 import { ContinentsDocument, ContinentsQuery } from "../client/codegen";
 import { gqlRequest } from "@packages/swr-gql/gqlRequest";
 
+const BASE = process.env.NEXT_PUBLIC_VERCEL_URL? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` :""
+
 const Home: NextPage<ContinentsQuery> = (props) => {
-  console.log(`REACT ${process.env.NEXT_PUBLIC_VERCEL_URL}/api/graphql`)
+  console.log(`REACT ${BASE}/api/graphql`)
   const { data } = useSwrGql(
     ContinentsDocument,
     {},
-    { url: `${process.env.NEXT_PUBLIC_VERCEL_URL||""}/api/graphql`, fallbackData: props }
+    { url: `${BASE||""}/api/graphql`, fallbackData: props }
   );
 
   return (
@@ -38,11 +40,11 @@ const Home: NextPage<ContinentsQuery> = (props) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => { 
-  console.log(`${process.env.VERCEL_URL}/api/graphql`)
+  console.log(`getStaticProps ${BASE}/api/graphql`)
   const data = await gqlRequest(
     ContinentsDocument,
     {},
-    `${process.env.VERCEL_URL}/api/graphql`,
+    `${BASE}/api/graphql`,
   );
  
   return {
