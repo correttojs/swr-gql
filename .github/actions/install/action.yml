@@ -1,0 +1,18 @@
+name: 'Install'
+description: 'Install'
+
+runs:
+    using: 'composite'
+    steps:
+        - uses: actions/setup-node@v3
+        - uses: actions/cache@v3
+          id: yarn-cache
+          with:
+              path: |
+                  **/node_modules
+                  ${{ github.workspace }}/node_modules
+                  ${{ steps.yarn-cache-dir-path.outputs.dir }}
+              key: ${{ runner.os }}-modules-${{ hashFiles('./yarn.lock') }}
+        - name: Install
+          shell: bash
+          run: yarn
