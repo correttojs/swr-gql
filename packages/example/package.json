@@ -7,8 +7,7 @@
     "build": "yarn codegen && next build",
     "start": "next start",
     "lint": "next lint",
-    "codegen-tsc": "yarn codegen && yarn tsc",
-    "codegen": "graphql-codegen --config codegen.resolvers.yml && graphql-codegen --config codegen.yml"
+    "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
     "@graphql-typed-document-node/core": "3.1.1",
