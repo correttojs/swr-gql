@@ -7,16 +7,13 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import Cors from 'cors'
 
 const server = createServer({ 
-  graphiql:
-    process.env.NODE_ENV !== "production"
-      ? {
-          defaultQuery: /* GraphQL */ `
-            query {
-              hello
-            }
-          `,
-        }
-      : false,
+  graphiql:{
+    defaultQuery: /* GraphQL */ `
+      query {
+        continents{name, code}
+      }
+    `,
+  },
   endpoint: "/api/graphql",
   schema: {
     typeDefs,
