@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const data = await gqlRequest(
     ContinentsDocument,
     {},
-    `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/graphql`,
+    `${process.env.VERCEL_URL}/api/graphql`,
   );
  
   return {
