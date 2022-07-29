@@ -12,7 +12,7 @@
   "dependencies": {
     "@graphql-typed-document-node/core": "3.1.1",
     "@graphql-codegen/typescript-resolvers": "2.7.2",
-    "@graphql-yoga/node": "2.13.4",
+    "@graphql-yoga/node": "2.13.5",
     "@types/cors": "2.8.12",
     "cors": "2.8.5",
     "next": "12.2.3",
