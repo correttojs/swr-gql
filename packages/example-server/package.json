@@ -29,7 +29,7 @@
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.3",
     "next-plugin-graphql": "0.0.2",
-    "node-fetch": "3.2.9",
+    "node-fetch": "3.2.10",
     "typescript": "4.7.4"
   }
 }
