@@ -10,7 +10,7 @@
     "codegen": "graphql-codegen --config codegen.yml"
   },
   "dependencies": {
-    "@graphql-typed-document-node/core": "3.1.2",
+    "@graphql-typed-document-node/core": "3.2.0",
     "@packages/swr-gql": "*",
     "next": "12.3.4",
     "react": "18.2.0",
