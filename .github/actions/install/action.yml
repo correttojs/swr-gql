@@ -4,7 +4,7 @@ description: 'Install'
 runs:
     using: 'composite'
     steps:
-        - uses: actions/setup-node@v3
+        - uses: actions/setup-node@v4
         - uses: actions/cache@v3
           id: yarn-cache
           with:
