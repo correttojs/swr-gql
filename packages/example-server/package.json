@@ -13,7 +13,7 @@
     "@graphql-typed-document-node/core": "3.2.0",
     "@graphql-codegen/typescript-resolvers": "2.7.13",
     "@graphql-yoga/node": "2.13.13",
-    "@types/cors": "2.8.15",
+    "@types/cors": "2.8.17",
     "cors": "2.8.5",
     "next": "12.3.4",
     "react": "18.2.0",
